@@ -17,13 +17,37 @@
                 <h3>Llamadas a Servlet's</h3> 
                 <div class="index">
                     <ul class="llamadas">
-                        <li><a href="Controlador">Controlador</a></li>
+                        <li><p><a href="Controlador">Controlador</a></p></li>
                         <li>
+                            <p>
                             <form method="post" action="Controlador">
                                 <input type="submit">
                             </form>
+                            </p>
                         </li>
-                        <li>Enlace 1. Pulsa <a href="Controlador">aqu&iacute;.</a></li>
+                        <li><p><a href="Entrada">Entrada</p></a></li>
+                        <li><p><a href="Entrada?sumador1=12&sumador2=34">Entrada con Parámetros</p></a></li>
+                        
+                        <li>
+                            <p>
+                            <form action="Entrada" method ="post">
+                                <label>Nombre: </label>
+                                <input type="text" name="nombre">
+                                <br>
+                                <label>Apellido: </label>
+                                <input type="text" name="apellidos">
+                                <br>
+                                <label>Preferencias: </label>
+                                <select name="preferencia" multiple>
+                                    <option value="Deporte">Deporte</option>
+                                    <option value="Viajar">Viajar</option>
+                                    <option value="Comer">Comer</option>
+                                </select>
+                                <input type="submit" name="boton" value="Enumeration">
+                                <input type="submit" name="boton" value="Mapa">
+                            </form>
+                            </p>
+                        </li>
                     </ul>
                 </div>
             </div>
