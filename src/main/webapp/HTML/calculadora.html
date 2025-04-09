@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <form action="../JSP/calculadora.jsp" method="post">
+            <table>
+                <!<!-- Suma -->
+                <tr>
+                    <td>Primer n&uacute;mero</td>
+                    <td><input type="text" name="operacion1"/></td>
+                </tr>
+                <tr>
+                    <td>Segundo n&uacute;mero</td>
+                    <td><input type="text" name="operacion2"/></td>
+                </tr>
+            </table>
+             <tr>
+                <td colspan="2">
+                    <input type="submit" name="operacion" value="sumar">
+                    <input type="submit" name="operacion" value="restar">
+                    <input type="submit" name="operacion" value="multiplicar">
+                    <input type="submit" name="operacion" value="dividir">
+                </td>
+            </tr>
+
+        </form>
+    </body>
+</html>
