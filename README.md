@@ -23,8 +23,19 @@ Las tecnologías utilizadas son:
 
 * [Maven](https://maven.apache.org/) - Gestor de dependencias y herramienta de construcción.
 
-* ## Descripción
-Actualmente, este proyecto incluye un servlet, es un proyecto inicial donde se manejan diferentes funcionalidades en una aplicación web,  también cuenta con algo de estilos mediante CSS.
+## Descripción
+Actualmente, este proyecto incluye varios servlets y funcionalidades básicas como:
+
+### 🌀 Servlets
+
+* **Servlet Entrada**: Muestra información según los parámetros enviados desde un formulario, usando dos métodos: `getParameterNames` y `getParameterMap`.
+* **Servlet Registro**: Gestiona un formulario de registro con validación de campos y visualización de errores, además de mostrar un resumen de los datos enviados.
+
+### 📄 JSP
+
+* **Calculadora básica**: Se introducen dos números y se elige mediante botones la operación aritmética mostrando el resultado.
+
+También cuenta con algo de estilos mediante CSS.
 
 ## Autores
 
