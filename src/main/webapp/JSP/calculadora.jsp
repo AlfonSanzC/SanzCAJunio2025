@@ -4,8 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/estilos.css">
 </head>
-<body>
+<body  class="calculadoraEstilos">
     <%
         String mensaje = "";
         try {

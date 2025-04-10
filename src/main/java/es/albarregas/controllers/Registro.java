@@ -58,23 +58,24 @@ public class Registro extends HttpServlet {
         formulario.append("<!DOCTYPE html><html lang='es'><head><title>Formulario</title>")
                 .append("<meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>")
                 .append("<link rel='stylesheet' type='text/css' href='./css/estilos.css'/>")
-                .append("</head><body><h1>Entrada de datos</h1>")
-                .append("<form method='post' action='Registro'>")
-                .append("<label><strong>Nombre: </strong></label>")
-                .append("<input type='text' name='Nombre' value='").append(campos.getOrDefault("Nombre", "")).append("'/><br>")
-                .append(errores.containsKey("Nombre") ? "<p style='color:red;'>" + errores.get("Nombre") + "</p>" : "")
-                .append("<br><label><strong>Apellidos: </strong></label>")
-                .append("<input type='text' name='Apellidos' value='").append(campos.getOrDefault("Apellidos", "")).append("'/><br><br>")
-                .append("<label><strong>Fecha de nacimiento: </strong></label>")
-                .append("<input type='date' name='Fecha_nacimiento' value='").append(campos.getOrDefault("Fecha_nacimiento", "")).append("'/><br>")
-                .append(errores.containsKey("Fecha_nacimiento") ? "<p style='color:red;'>" + errores.get("Fecha_nacimiento") + "</p>" : "")
-                .append("<br><label><strong>Usuario: </strong></label>")
-                .append("<input type='text' name='Usuario' value='").append(campos.getOrDefault("Usuario", "")).append("'/><br>")
-                .append(errores.containsKey("Usuario") ? "<p style='color:red;'>" + errores.get("Usuario") + "</p>" : "")
-                .append("<br><label><strong>Contraseña: </strong></label>")
-                .append("<input type='password' name='Password'/><br>")
-                .append(errores.containsKey("Password") ? "<p style='color:red;'>" + errores.get("Password") + "</p>" : "")
-                .append("<br><label><strong>Género: </strong></label>");
+                .append("</head><body class='contenedorRegistro'>")
+                .append("<h1>Registro de Usuario</h1>")
+                .append("<form method='post' action='Registro' class='registro-form'>")
+                .append("<div class='campo'><label><strong>Nombre: </strong></label>")
+                .append("<input type='text' name='Nombre' value='").append(campos.getOrDefault("Nombre", "")).append("'/></div>")
+                .append(errores.containsKey("Nombre") ? "<p class='error'>" + errores.get("Nombre") + "</p>" : "")
+                .append("<div class='campo'><label><strong>Apellidos: </strong></label>")
+                .append("<input type='text' name='Apellidos' value='").append(campos.getOrDefault("Apellidos", "")).append("'/></div><br>")
+                .append("<div class='campo'><label><strong>Fecha de nacimiento: </strong></label>")
+                .append("<input type='date' name='Fecha_nacimiento' value='").append(campos.getOrDefault("Fecha_nacimiento", "")).append("'/></div>")
+                .append(errores.containsKey("Fecha_nacimiento") ? "<p class='error'>" + errores.get("Fecha_nacimiento") + "</p>" : "")
+                .append("<div class='campo'><label><strong>Usuario: </strong></label>")
+                .append("<input type='text' name='Usuario' value='").append(campos.getOrDefault("Usuario", "")).append("'/></div>")
+                .append(errores.containsKey("Usuario") ? "<p class='error'>" + errores.get("Usuario") + "</p>" : "")
+                .append("<div class='campo'><label><strong>Contraseña: </strong></label>")
+                .append("<input type='password' name='Password'/></div>")
+                .append(errores.containsKey("Password") ? "<p class='error'>" + errores.get("Password") + "</p>" : "")
+                .append("<div class='campo_generoRegistro'><label><strong>Género: </strong></label>");
 
         String[] generos = {"Hombre", "Mujer", "Otro"};
         for (String genero : generos) {
@@ -87,7 +88,11 @@ public class Registro extends HttpServlet {
             formulario.append("<p style='color:red;'>").append(errores.get("Genero")).append("</p>");
         }
 
-        formulario.append("<br><br><label><strong>Preferencias:</strong></label>");
+        formulario.append("</div>"); // Cierre del div para género
+
+        formulario.append("</div>") // Cierre del div de género
+                .append("<div class='campo_preferenciasRegistro'>")
+                .append("<label><strong>Preferencias:</strong></label>");
         String[] todasPreferencias = {"Deportes", "Lectura", "Cine", "Viajes"};
         for (String pref : todasPreferencias) {
             formulario.append("<input type='checkbox' name='Preferencias' value='").append(pref).append("'")
@@ -95,8 +100,11 @@ public class Registro extends HttpServlet {
                     .append("> <label>").append(pref).append("</label>");
         }
 
-        formulario.append("<br><br><input type='submit' name='Enviar' value='Enviar'/>")
+        formulario.append("</div>")
+                .append("<div class='campo_botonRegistro'>")
+                .append("<input type='submit' name='Enviar' value='Enviar'/>")
                 .append("<input type='reset' name='Limpiar' value='Limpiar formulario'/>")
+                .append("</div>")
                 .append("</form></body></html>");
 
         out.println(formulario.toString());

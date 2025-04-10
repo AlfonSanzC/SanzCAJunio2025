@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Intercambio de divisas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    </head>
+    <body class="cuerpoDivisas">
+        <form action="../JSP/divisas.jsp" method="post">
+            <h1>Calculadora de divisas</h1>
+            <br><br>
+             <div id="pagina_form">
+            <label for="cantidad">Introduce una cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" step="0.01"> 
+        </div>
+        <br>
+        <div>
+            <label for="divisaOrigen">Selecciona una divisa:</label>
+            <select id="divisaOrigen" name="divisaOrigen" required>
+                <option value="euros">Euros</option>
+                <option value="dolares">Dólares</option>
+                <option value="yenes">Yenes</option>
+                <option value="libras">Libras Esterlinas</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="divisaDestino">Seleccione un cambio de divisa:</label>
+            <select id="divisaDestino" name="divisaDestino" required>
+                <option value="euros">Euros</option>
+                <option value="dolares">Dólares</option>
+                <option value="yenes">Yenes</option>
+                <option value="libras">Libras Esterlinas</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="button" value="Volver" onclick="history.back()">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Convertir">
+        </div>
+        </form>
+    </body>
+</html>
