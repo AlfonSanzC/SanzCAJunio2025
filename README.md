@@ -24,7 +24,7 @@ Las tecnologías utilizadas son:
 * [Maven](https://maven.apache.org/) - Gestor de dependencias y herramienta de construcción.
 
 ## Descripción
-Actualmente, este proyecto incluye varios servlets y funcionalidades básicas como:
+Actualmente, este proyecto incluye varios servlets, jsp y funcionalidades básicas como:
 
 ### 🌀 Servlets
 
@@ -33,9 +33,17 @@ Actualmente, este proyecto incluye varios servlets y funcionalidades básicas co
 
 ### 📄 JSP
 
+* **Primera**: Muestra un saludo simple y un enlace de vuelta al menú principal.
+
 * **Calculadora básica**: Se introducen dos números y se elige mediante botones la operación aritmética mostrando el resultado.
 
-También cuenta con algo de estilos mediante CSS.
+* **Procesador de divisas**: Convierte cantidades entre distintas monedas usando tasas definidas.
+
+* **Contador de visitas**: Usa cookies para contar y mostrar cuántas veces el usuario ha visitado la página.
+
+* **Nombre con cookie**: Guarda y muestra un nombre usando cookies, personalizando el saludo según si ya existe o no.
+
+🎨 También cuenta con estilos mediante CSS.
 
 ## Autores
 
